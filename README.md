@@ -102,7 +102,7 @@ The three GEMMs correspond to QKV projection, output projection, and FFN respect
 
 Explore the full per-cycle power trace with zoom, pan and component toggle:
 
-**[Open interactive chart](https://dobutler.github.io/V100-LLM-Inference-Simulation/v100_v2_interactive.html)**
+**[Open interactive chart](https://dobutler.github.io/LLM-Inference-Simulation/Inference_v2_interactive.html)**
 
 Features:
 - Box zoom on both X and Y axes
