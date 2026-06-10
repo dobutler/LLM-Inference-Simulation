@@ -14,7 +14,7 @@ This project builds a cycle-accurate architectural model of LLM inference on a G
 
 The simulation captures power consumption across the prefill and decode phases of a small decoder-only transformer, enabling analysis of the compute-bound to memory-bound transition at a granularity that real hardware measurement tools cannot achieve.
 
-**What this simulation models faithfully:**
+**What this simulation models:**
 - GV100/V100 microarchitectural parameters (SM count, cache hierarchy, clock, HBM)
 - Per-cycle power across 34 components via AccelWattch
 - Prefill vs decode phase structure and relative power behaviour
