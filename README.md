@@ -136,11 +136,34 @@ Power trace + metric trace (per cycle)
 
 ## References
 
-- Kandiah et al. *AccelWattch: A Power Modeling Framework for Modern GPUs.* MICRO 2021
-- Bakhoda et al. *Analyzing CUDA Workloads using a Detailed GPU Simulator.* ISPASS 2009
-- Vaswani et al. *Attention Is All You Need.* NeurIPS 2017
-- Ba et al. *Layer Normalization.* 2016
-- Solovyeva et al. *The Illusion of Power Capping in LLM Decode.* 2025
-- Yang et al. *Characterizing LLM Inference Energy-Performance Tradeoffs.* 2025
+[1] A. Bakhoda, G. L. Yuan, W. W. L. Fung, H. Wong, and T. M. Aamodt,
+    "Analyzing CUDA workloads using a detailed GPU simulator," in *Proc.
+    IEEE Int. Symp. Performance Analysis of Systems and Software (ISPASS)*,
+    Apr. 2009, pp. 163–174.
+
+[2] M. Khairy, J. Shen, T. M. Aamodt, and T. G. Rogers, "Accel-Sim: An
+    extensible simulation framework for validated GPU modeling," in *Proc.
+    47th Int. Symp. Computer Architecture (ISCA)*, May 2020, pp. 473–486.
+
+[3] V. Kandiah, S. Peverelle, M. Khairy, J. Pan, A. Manjunath, T. G. Rogers,
+    T. M. Aamodt, and N. Hardavellas, "AccelWattch: A power modeling
+    framework for modern GPUs," in *Proc. 54th IEEE/ACM Int. Symp.
+    Microarchitecture (MICRO)*, Oct. 2021, pp. 738–753.
+
+[4] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez,
+    Ł. Kaiser, and I. Polosukhin, "Attention is all you need," in *Advances
+    in Neural Information Processing Systems (NeurIPS)*, vol. 30, 2017.
+
+[5] J. L. Ba, J. R. Kiros, and G. E. Hinton, "Layer normalization,"
+    *arXiv preprint arXiv:1607.06450*, 2016.
+
+[6] P. J. Maliakel, S. Ilager, and I. Brandic, "Characterizing LLM inference
+    energy-performance tradeoffs across workloads and GPU scaling,"
+    *arXiv preprint arXiv:2501.08219*, 2025.
+
+[7] A. Solovyeva et al., "The illusion of power capping in LLM decode:
+    A phase-aware energy characterisation across attention architectures,"
+    *arXiv preprint arXiv:2605.11999*, 2025.
+
 
 ---
