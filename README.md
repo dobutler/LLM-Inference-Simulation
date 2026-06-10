@@ -1,4 +1,4 @@
-# V100 LLM Inference Power Simulation
+# LLM Inference Power Simulation
 
 Cycle-accurate GPU power simulation of LLM inference on a simulated NVIDIA V100 (GV100) using **GPGPU-Sim 4.x** and **AccelWattch**.
 
