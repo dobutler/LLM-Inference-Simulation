@@ -6,7 +6,7 @@ Cycle-accurate GPU power simulation of LLM inference on a simulated NVIDIA V100 
 
 ## Overview
 
-This project simulates a small transformer model running LLM inference on a V100 GPU — without access to real hardware. The simulation captures per-cycle power consumption across all GPU components, enabling analysis at a granularity that real hardware measurement tools like nvidia-smi (1ms resolution) cannot achieve.
+This project simulates a small transformer model running LLM inference on a V100 GPU without access to real hardware. The simulation captures per-cycle power consumption across all GPU components, enabling analysis at a granularity that real hardware measurement tools like nvidia-smi (1ms resolution) cannot achieve.
 
 **Simulation resolution: 0.691 ns per sample** (one GPU clock cycle at 1447 MHz)
 
@@ -47,8 +47,8 @@ This project simulates a small transformer model running LLM inference on a V100
 
 **Power profile**
 - Prefill average: 64.8 W
-- Decode average: 58.4 W (correctly lower than prefill)
-- Peak power: 199.7 W (within V100 TDP of 300 W)
+- Decode average: 58.4 W 
+- Peak power: 199.7 W 
 - Total simulation cycles: 35,088
 
 **Cache hierarchy**
@@ -57,10 +57,10 @@ This project simulates a small transformer model running LLM inference on a V100
 - L1 hit rate: 73.7% prefill GEMM vs 29.2% decode GEMM — quantifies the compute-bound to memory-bound transition
 
 **Power components**
-- Constant power (CONSTP): ~32 W — dominates baseline
-- Idle core power (IDLE_COREP): ~19 W — reflects low SM utilisation at this model size
-- Shared memory power (SHRDP): active — confirms tiled GEMM is working
-- Integer division power (INT_DIVP): 0 W — LayerNorm rem.s32 eliminated
+- Constant power (CONSTP): ~32 W 
+- Idle core power (IDLE_COREP): ~19 W 
+- Shared memory power (SHRDP): active 
+- Integer division power (INT_DIVP): 0 W 
 
 **Transformer architecture visible from power trace**
 Each prefill layer produces 8 distinct power regions in sequence:
