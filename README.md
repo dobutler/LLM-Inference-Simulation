@@ -181,48 +181,6 @@ With one attention head and hidden dimension 128, attention kernels contribute a
 
 ---
 
-## Reproduce
-
-**Environment**
-
-| Dependency | Version |
-|---|---|
-| GPGPU-Sim | 4.2.0 (`dev` branch) |
-| AccelWattch | bundled with GPGPU-Sim 4.2.0 |
-| CUDA toolkit | 11.8 (host compiler only — nvcc produces PTX) |
-| Compilation target | `-arch=sm_52` (PTX mode requirement) |
-| OS | Ubuntu 22.04 |
-
-**Steps**
-
-```bash
-# 1. Build GPGPU-Sim with AccelWattch
-git clone https://github.com/accel-sim/gpgpu-sim_distribution
-cd gpgpu-sim_distribution && git checkout dev
-source setup_environment
-make -j$(nproc)
-
-# 2. Compile the inference kernel
-nvcc -arch=sm_52 -O2 inference_llm.cu -o inference_llm
-
-# 3. Run simulation (expect ~4h 40min wall-clock)
-./inference_llm
-
-# 4. Parse and visualise
-python scripts/parse_trace.py
-```
-
-**Expected outputs**
-
-| File | Description |
-|---|---|
-| `gpgpusim_power_trace_report_*.gz` | Per-cycle power for all 34 components |
-| `gpgpusim_metric_trace_report_*.gz` | Per-cycle microarchitecture metrics |
-| `accelwattch_power_report.log` | Per-kernel average power summary |
-| `console.log` | Full GPGPU-Sim output with IPC and cache stats |
-
----
-
 ## References
 
 [1] A. Bakhoda, G. L. Yuan, W. W. L. Fung, H. Wong, and T. M. Aamodt, "Analyzing CUDA workloads using a detailed GPU simulator," in *Proc. IEEE Int. Symp. Performance Analysis of Systems and Software (ISPASS)*, Apr. 2009, pp. 163–174.
