@@ -4,7 +4,7 @@ Cycle-accurate power simulation of a small transformer model running LLM inferen
 
 > **Simulation resolution: 0.691 ns per sample** (one simulated clock cycle at 1447 MHz — GPGPU-Sim config clock for GV100; real V100 SXM2 boost clock is 1530 MHz / 0.654 ns)
 
-This is a **parameterised architectural model**, not a full hardware simulation. The GPU configuration (80 SMs, 6 MB L2, 32 GB HBM2) matches the V100 SXM2 specification. Execution runs in PTX functional simulation mode — Volta-specific features including tensor cores and independent thread scheduling are not modelled. See [Limitations](#limitations) for full details.
+This is a **parameterised architectural model**. The GPU configuration (80 SMs, 6 MB L2, 32 GB HBM2) matches the V100 SXM2 specification. Execution runs in PTX functional simulation mode — Volta-specific features including tensor cores and independent thread scheduling are not modelled. 
 
 ---
 
