@@ -126,4 +126,6 @@ Built on [GPGPU-Sim](https://github.com/gpgpu-sim/gpgpu-sim_distribution) (UBC) 
 
 ## A note on how this document was produced
 
-This README and the underlying analysis were produced through several days of interactive work between the author and an AI assistant.
+This README and the underlying analysis were produced through several days of interactive work between the author and an AI assistant. Questions, corrections, and audits welcome. 
+
+#DilekAndHerTinyLLM
