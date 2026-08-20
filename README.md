@@ -1,4 +1,4 @@
-# LLM Inference Power Simulation — GV100/V100-parameterised architectural model
+# LLM Inference Power Simulation — GV100/V100-parameterised architectural model, #DilekAndHerTinyLLM
 
 **A "wind tunnel" for LLM inference energy: cycle-level simulation of a small transformer running prefill and decode on a modelled NVIDIA V100 GPU, using GPGPU-Sim 4.2.0 + AccelWattch — no physical GPU required.**
 
